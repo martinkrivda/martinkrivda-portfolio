@@ -12,6 +12,8 @@
 # production
 /build
 remote-repo/
+dist
+.vercel
 
 # misc
 .DS_Store
