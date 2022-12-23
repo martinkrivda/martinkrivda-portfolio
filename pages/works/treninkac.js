@@ -1,4 +1,5 @@
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Title, WorkImage, Meta } from '../../components/work';
 import P from '../../components/paragraph';
@@ -45,5 +46,11 @@ const Work = () => (
     </Container>
   </Layout>
 );
+
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+  },
+});
 
 export default Work;

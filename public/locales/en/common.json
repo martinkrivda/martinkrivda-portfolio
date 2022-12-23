@@ -1,0 +1,41 @@
+{
+  "en": "en-US",
+  "change-locale": "Change locale",
+  "present": "present",
+  "work": "Work",
+  "iss-europe": "I have already established external cooperation with ISS Europe s.r.o. during my studies at the University. I helped with the development and management of ECM software products for large and medium-sized companies.",
+  "company-website": "Company website",
+  "personal-projects": "Personal projects",
+  "electronic-training-log": "Electronic training log",
+  "about-training-log": "The idea of an electronic training diary for orienteering came from the head coach of the junior national orienteering team, Pavel Kosárek, in the autumn of 2019. As part of my master's thesis, I came up with the whole concept and at the end of 2020 the app was launched to the world. I am still working on the development.",
+  "my-portfolio": "My portfolio",
+  "education": "Education",
+  "vse-master": "Information systems and technologies",
+  "vse": "University of Economics in Prague",
+  "vse-bachelor": "Applied informatics",
+  "diploma-thesis": "Diploma thesis",
+  "bachelor-thesis": "Bachelor thesis",
+  "skills": "Skills",
+  "i-love": "I",
+  "orienteering": "Orienteering",
+  "xc-skiing": "Cross-country skiing",
+  "multimedia": "Multimedia",
+  "travelling": "Travelling, mountains, nature",
+  "on-web": "On the web",
+  "digital-craftsman": "Digital craftsman",
+  "developer": "Developer",
+  "data-engineer": "Data engineer",
+  "photographer": "Photographer",
+  "intro": "Hi, I'm a full-stack developer.",
+  "footer": {
+    "copyright": "Created with {{love}} and lot of {{coffee}}",
+    "credit": "Inspired by"
+  },
+  "navbar": {
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "source": "Source",
+    "about-me": "About me",
+    "check-source": "Check the source"
+  }
+}

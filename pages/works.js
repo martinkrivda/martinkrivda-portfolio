@@ -1,4 +1,5 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Section from '../components/section';
 import Layout from '../components/layouts/article';
 import { WorkGridItem } from '../components/grid-item';
@@ -86,5 +87,11 @@ const Works = () => {
     </Layout>
   );
 };
+
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+  },
+});
 
 export default Works;

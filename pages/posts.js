@@ -1,4 +1,5 @@
 import { Container, Heading } from '@chakra-ui/react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '../components/layouts/article';
 
 const Posts = () => (
@@ -25,5 +26,11 @@ const Posts = () => (
     </Container>
   </Layout>
 );
+
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+  },
+});
 
 export default Posts;

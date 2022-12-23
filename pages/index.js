@@ -13,12 +13,15 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
 import Paragraph from '../components/paragraph';
 import { BioSection, BioYear } from '../components/bio';
 import { IoLogoInstagram, IoLogoGithub } from 'react-icons/io5';
 const Page = () => {
+  const { t } = useTranslation('common');
   return (
     <Layout>
       <Container>
@@ -29,14 +32,17 @@ const Page = () => {
           mb={6}
           align="center"
         >
-          Ahoj, jsem full-stack vývojář na volné noze.
+          {t('intro')}
         </Box>
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
               Martin Křivda
             </Heading>
-            <p>Digitální kutil ( Vývojář / Designer / Fotograf )</p>
+            <p>
+              {t('digital-craftsman')} ( {t('developer')} / {t('data-engineer')}{' '}
+              / {t('photographer')} )
+            </p>
           </Box>
           <Box
             flexShrink={0}
@@ -58,59 +64,51 @@ const Page = () => {
         </Box>
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            Work
+            {t('work')}
           </Heading>
-          <BioYear>2016 - dosud | ISS Europe spol. s r.o.</BioYear>
-          <Paragraph>
-            S ISS Europe spol. s r.o. jsem navázal externí spolupráci již při
-            studiu na Vysoké škole. Pomáhal jsem s vývojem a správou
-            softwarových produktů ECM pro velké a střední společnosti.
-          </Paragraph>
-          <Link href="http://www.iss-europe.eu/">Web společnosti</Link>
+          <BioYear>2016 - {t('present')} | ISS Europe spol. s r.o.</BioYear>
+          <Paragraph>{t('iss-europe')}</Paragraph>
+          <Link href="http://www.iss-europe.eu/"> {t('company-website')}</Link>
           <Heading as="h3" variant="section-title">
-            Personal projects
+            {t('personal-projects')}
           </Heading>
-          <BioYear>2020 - dosud | Elektronický tréninkový deník</BioYear>
-          <Paragraph>
-            Myšlenka elektronického tréninkového deníku pro orientační sporty
-            přišla od šéftrenéra juniorské reprezentace orientačního běhu, Pavla
-            Košárka, na podzim 2019. V rámci mé diplomové práce jsem pak přišel
-            s celým konceptem a na konci roku 2020 byla aplikace vypuštěna do
-            světa.
-          </Paragraph>
+          <BioYear>
+            2020 - {t('present')} | {t('electronic-training-log')}
+          </BioYear>
+          <Paragraph>{t('about-training-log')}</Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                Moje portfolio
+                {t('my-portfolio')}
               </Button>
             </NextLink>
           </Box>
         </Section>
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
-            Vzdělání
+            {t('education')}
           </Heading>
           <BioSection>
             <BioYear>2019 - 2021</BioYear>
-            <Text as="b">Informační systémy a technologie (Ing.)</Text> <br />
+            <Text as="b">{t('vse-master')} (Ing.)</Text> <br />
             <Text fontSize="xs" pl="8.8em">
-              Vysoká škola ekonomická v Praze
+              {t('vse')}
             </Text>
             <Link href="https://vskp.vse.cz/83131_vyvoj-a-implementace-aplikace-na-zpracovani-sportovnich-treninku">
               <Button size="xs" variant="outline" colorScheme="blue">
-                Diplomová práce
+                {t('diploma-thesis')}
               </Button>
             </Link>
           </BioSection>
           <BioSection>
             <BioYear>2015 - 2019</BioYear>
-            <Text as="b">Aplikovaná informatika (Bc.)</Text>
+            <Text as="b">{t('vse-bachelor')} (Bc.)</Text>
             <Text fontSize="xs" pl="8.8em">
-              Vysoká škola ekonomická v Praze
+              {t('vse')}
             </Text>
             <Link href="https://vskp.vse.cz/76811_analyza-moznosti-automatickeho-mereni-bezeckych-zavodu">
               <Button size="xs" variant="outline" colorScheme="blue">
-                Bakalářská práce
+                {t('bachelor-thesis')}
               </Button>
             </Link>
           </BioSection>
@@ -118,7 +116,7 @@ const Page = () => {
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
-            Dovednosti
+            {t('skills')}
           </Heading>
           <Badge m={1}>JavaScript</Badge>
           <Badge m={1}>NodeJS</Badge>
@@ -145,16 +143,18 @@ const Page = () => {
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            I ♥
+            {t('i-love')} ♥
           </Heading>
-          <Paragraph>Orientační běh 🌲🏃💨 / běžky ⛷</Paragraph>
-          <Paragraph>Multimédia 📷🎥🎨</Paragraph>
-          <Paragraph>Cestování, hory, příroda 🌍🏔</Paragraph>
+          <Paragraph>
+            {t('orienteering')} 🌲🏃💨 / {t('xc-skiing')} ⛷
+          </Paragraph>
+          <Paragraph>{t('multimedia')} 📷🎥🎨</Paragraph>
+          <Paragraph>{t('travelling')} 🌍🏔</Paragraph>
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Na sítích
+            {t('on-web')}
           </Heading>
           <List>
             <ListItem>
@@ -188,5 +188,11 @@ const Page = () => {
     </Layout>
   );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+  },
+});
 
 export default Page;

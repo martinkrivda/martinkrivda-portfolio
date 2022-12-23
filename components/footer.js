@@ -5,8 +5,10 @@ import {
   Link,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box
       position="fixed"
@@ -27,10 +29,11 @@ const Footer = () => {
         align={{ base: 'center', md: 'center' }}
       >
         <Text align="center">
-          © {new Date().getFullYear()} Martin Křivda, tvořeno s ♥ a hodně ☕.
+          © {new Date().getFullYear()}{' '}
+          {t('footer.copyright', { love: '♥', coffee: '☕' })}.
         </Text>
         <Text fontSize="xs" align="center">
-          Inspired by <Link href="https://www.craftz.dog/">TM</Link>.
+          {t('footer.credit')} <Link href="https://www.craftz.dog/">TM</Link>.
         </Text>
       </Container>
     </Box>

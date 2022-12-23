@@ -14,7 +14,9 @@ import {
   IconButton,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 import ThemeToggleButton from './theme-toggle-button';
+import LocaleToggleButton from './locale-toggle-button';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { IoLogoGithub } from 'react-icons/io5';
 
@@ -39,6 +41,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = (props) => {
   const { path } = props;
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -73,10 +76,10 @@ const Navbar = (props) => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Portfolio
+            {t('navbar.portfolio')}
           </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Blog
+            {t('navbar.blog')}
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -88,12 +91,13 @@ const Navbar = (props) => {
             pl={2}
           >
             <IoLogoGithub />
-            Zdroj
+            {t('navbar.source')}
           </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
+          <LocaleToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -104,16 +108,16 @@ const Navbar = (props) => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>O mně</MenuItem>
+                  <MenuItem as={Link}>{t('navbar.about-me')}</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Portfolio</MenuItem>
+                  <MenuItem as={Link}>{t('navbar.portfolio')}</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Blog</MenuItem>
+                  <MenuItem as={Link}>{t('navbar.blog')}</MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/martinkrivda">
-                  Mkrnout na zdroj
+                  {t('navbar.check-source')}
                 </MenuItem>
               </MenuList>
             </Menu>

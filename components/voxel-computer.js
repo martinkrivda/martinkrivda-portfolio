@@ -16,7 +16,7 @@ const VoxelComputer = () => {
   (process.env.NODE_ENV === 'production'
     ? 'https://craftzdog.global.ssl.fastly.net/homepage'
     : '') + '/laptop.glb'; */
-  const urlDogGLB = './laptop.glb';
+  const urlDogGLB = '/laptop.glb';
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer;

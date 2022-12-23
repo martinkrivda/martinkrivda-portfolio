@@ -1,0 +1,41 @@
+{
+  "en": "cs-CZ",
+  "change-locale": "Změnit jazyk",
+  "present": "dosud",
+  "work": "Práce",
+  "iss-europe": "S ISS Europe spol. s r.o. jsem navázal externí spolupráci již při studiu na Vysoké škole. Pomáhal jsem s vývojem a správou softwarových produktů ECM pro velké a střední společnosti.",
+  "company-website": "Web společnosti",
+  "personal-projects": "Osobní projekty",
+  "electronic-training-log": "Elektronický tréninkový deník",
+  "about-training-log": "Myšlenka elektronického tréninkového deníku pro orientační sporty přišla od šéftrenéra juniorské reprezentace orientačního běhu, Pavla Košárka, na podzim 2019. V rámci mé diplomové práce jsem pak přišel s celým konceptem a na konci roku 2020 byla aplikace vypuštěna do světa. Na vývoji stále pracuji.",
+  "my-portfolio": "Moje portfolio",
+  "education": "Vzdělání",
+  "vse-master": "Informační systémy a technologie",
+  "vse": "Vysoká škola Ekonomická v Praze",
+  "vse-bachelor": "Aplikovaná informatika",
+  "diploma-thesis": "Diplomová práce",
+  "bachelor-thesis": "Bakalářská práce",
+  "skills": "Dovednosti",
+  "i-love": "Já",
+  "orienteering": "Orientační běh",
+  "xc-skiing": "běžky",
+  "multimedia": "Multimédia",
+  "travelling": "Cestování, hory, příroda",
+  "on-web": "Na sítích",
+  "digital-craftsman": "Digitální kutil",
+  "developer": "Vývojář",
+  "data-engineer": "datový inženýr",
+  "photographer": "fotograf",
+  "intro": "Ahoj, jsem full-stack vývojář webových aplikací.",
+  "footer": {
+    "copyright": "Vytvořeno s {{love}} and hodně {{coffee}}",
+    "credit": "Inspirováno od"
+  },
+  "navbar": {
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "source": "Zdroj",
+    "about-me": "O mně",
+    "check-source": "Mrkni na zdroj"
+  }
+}
