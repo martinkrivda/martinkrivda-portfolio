@@ -81,6 +81,9 @@ const Navbar = (props) => {
           <LinkItem href="/posts" path={path}>
             {t('navbar.blog')}
           </LinkItem>
+          <LinkItem href="/contact" path={path}>
+            {t('navbar.hireMe')}
+          </LinkItem>
           <LinkItem
             target="_blank"
             href="https://github.com/martinkrivda"

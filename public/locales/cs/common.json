@@ -36,6 +36,20 @@
     "blog": "Blog",
     "source": "Zdroj",
     "about-me": "O mně",
+    "hireMe": "Naverbuj si mě",
     "check-source": "Mrkni na zdroj"
+  },
+  "contact": {
+    "email": "E-mail",
+    "fullname": "Celé jméno",
+    "subject": "Předmět",
+    "message": "Zpráva",
+    "send": "Odeslat",
+    "sending": "Odesílám",
+    "writeMessage": "Napiš mi zprávu",
+    "hireMe": "Naverbuj si mě",
+    "neverShareYourEmail": "Nikdy nebudu sdílet tvou emailovou adresu",
+    "successMessage": "Díky! Tvoje zpráva byla doručena.",
+    "failureMessage": "Oops! Něco se při odesílání pokazilo, zkus to prosím znovu."
   }
 }

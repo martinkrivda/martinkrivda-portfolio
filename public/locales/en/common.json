@@ -36,6 +36,20 @@
     "blog": "Blog",
     "source": "Source",
     "about-me": "About me",
+    "hireMe": "Hire me",
     "check-source": "Check the source"
+  },
+  "contact": {
+    "email": "E-mail",
+    "fullname": "Fullname",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending",
+    "writeMessage": "Write me a message",
+    "hireMe": "Hire me",
+    "neverShareYourEmail": "I'll never share your email",
+    "successMessage": "Thank you! Your message has been delivered.",
+    "failureMessage": "Oops! Something went wrong, please try again."
   }
 }
