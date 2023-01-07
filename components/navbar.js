@@ -119,6 +119,9 @@ const Navbar = (props) => {
                 <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>{t('navbar.blog')}</MenuItem>
                 </NextLink>
+                <NextLink href="/contact" passHref>
+                  <MenuItem as={Link}>{t('navbar.hireMe')}</MenuItem>
+                </NextLink>
                 <MenuItem as={Link} href="https://github.com/martinkrivda">
                   {t('navbar.check-source')}
                 </MenuItem>
